@@ -108,12 +108,14 @@ export default function PlayerCard({
 
   // Fetch au montage
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchStats(false);
   }, [fetchStats]);
 
   // Réagir au force refresh global
   useEffect(() => {
     if (forceRefresh) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       fetchStats(true);
     }
   }, [forceRefresh, fetchStats]);

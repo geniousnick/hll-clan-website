@@ -85,7 +85,7 @@ async function scrapeHLLProfile(hllId: string): Promise<HLLStats> {
 
   // Extraire les données de __NEXT_DATA__ si disponible
   const nextDataEl = $("#__NEXT_DATA__");
-  let stats: Partial<HLLStats> = {};
+  const stats: Partial<HLLStats> = {};
 
   if (nextDataEl.length > 0) {
     try {

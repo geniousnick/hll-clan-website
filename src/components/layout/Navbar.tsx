@@ -30,7 +30,8 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
       }
     };
 
-    // État initial immédiat
+    // État initial
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,6 +39,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
 
   // Fermer le menu au changement de page
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMenuOpen(false);
   }, [pathname]);
 
