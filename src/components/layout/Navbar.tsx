@@ -45,7 +45,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
     { href: "/", label: t.home },
     { href: "/roster", label: t.roster },
     { href: "/matches", label: t.matches },
-    { href: "/portfolio", label: t.portfolio },
+    { href: "/front", label: t.portfolio },
     { href: "/recrutement", label: t.recruitment },
   ];
 
@@ -178,7 +178,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
 
             {/* Discord CTA — transform au lieu de scale pour éviter le layout reflow */}
             <a
-              href="LIEN_DISCORD_ICI"
+              href="https://discord.gg/knSjjMBJ4b"
               target="_blank"
               rel="noopener noreferrer"
               id="nav-discord-btn"
@@ -308,7 +308,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
             </Link>
           ))}
           <a
-            href="LIEN_DISCORD_ICI"
+            href="https://discord.gg/knSjjMBJ4b"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-[#5865F2] text-white text-sm font-semibold px-4 py-3 rounded mt-2"

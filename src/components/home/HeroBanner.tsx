@@ -112,7 +112,7 @@ export default function HeroBanner({ lang }: HeroBannerProps) {
           style={{ animationDelay: "0.9s", animationFillMode: "both" }}
         >
           <a
-            href="LIEN_DISCORD_ICI"
+            href="https://discord.gg/knSjjMBJ4b"
             target="_blank"
             rel="noopener noreferrer"
             id="hero-discord-btn"

@@ -8,9 +8,10 @@ export const translations = {
       roster: "Effectif",
       matches: "Palmarès",
       recruitment: "Recrutement",
-      portfolio: "Portfolio",
+      portfolio: "Le Front",
       discord: "Discord",
     },
+
     hero: {
       tag: "[L9O]",
       title: "La 9ème Ombre",
@@ -149,9 +150,10 @@ export const translations = {
       roster: "Roster",
       matches: "Results",
       recruitment: "Recruitment",
-      portfolio: "Portfolio",
+      portfolio: "The Front",
       discord: "Discord",
     },
+
     hero: {
       tag: "[L9O]",
       title: "The 9th Shadow",

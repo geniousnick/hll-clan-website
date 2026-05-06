@@ -1,7 +1,7 @@
 "use client";
 
 import { useLang } from "@/components/layout/ClientLayout";
-import PortfolioGallery from "@/components/portfolio/PortfolioGallery";
+import PortfolioGallery from "@/components/front/PortfolioGallery";
 
 export default function PortfolioPage() {
   const { lang } = useLang();
@@ -9,14 +9,14 @@ export default function PortfolioPage() {
   const hero = {
     fr: {
       tag: "Galerie",
-      title: "Portfolio",
+      title: "Le Front",
       subtitle: "Photos & Vidéos · La 9ème Ombre [L9O]",
       description:
         "Les meilleurs moments de notre clan — actions de combat, moments d'équipe et highlights de matchs.",
     },
     en: {
       tag: "Gallery",
-      title: "Portfolio",
+      title: "The Front",
       subtitle: "Photos & Videos · La 9ème Ombre [L9O]",
       description:
         "The best moments of our clan — combat actions, team moments and match highlights.",

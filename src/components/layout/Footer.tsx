@@ -74,7 +74,7 @@ export default function Footer({ lang }: FooterProps) {
               {footer.social}
             </h3>
             <a
-              href="LIEN_DISCORD_ICI"
+              href="https://discord.gg/knSjjMBJ4b"
               target="_blank"
               rel="noopener noreferrer"
               id="footer-discord-btn"

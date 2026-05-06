@@ -77,7 +77,7 @@ export default function RecruitmentSection({ lang }: RecruitmentSectionProps) {
             {t.cta.description}
           </p>
           <a
-            href="LIEN_DISCORD_ICI"
+            href="https://discord.gg/knSjjMBJ4b"
             target="_blank"
             rel="noopener noreferrer"
             id="recruitment-discord-btn"
