@@ -1,27 +1,55 @@
 // Portfolio data for La 9ème Ombre [L9O]
 //
-// Pour ajouter un média :
-// 1. Photos → place le fichier dans /public/portfolio/ et renseigne type: "photo"
-// 2. Vidéos YouTube → utilise l'URL YouTube et renseigne type: "video", source: "youtube"
-// 3. Vidéos locales → place le fichier .mp4 dans /public/portfolio/ et source: "local"
+// ─── COMMENT AJOUTER UN MÉDIA ────────────────────────────────────────────────
+//
+// 📷 PHOTO
+//   → Place le fichier dans /public/front/
+//   → Renseigne : type: "photo", src: "/front/ma-photo.jpg"
+//
+// ▶ VIDÉO YOUTUBE
+//   → Copie l'ID depuis l'URL : youtube.com/watch?v=XXXXXXX
+//   → Renseigne : type: "video", youtubeId: "XXXXXXX"
+//   → La miniature est générée automatiquement
+//
+// 📱 VIDÉO TIKTOK
+//   → Copie l'ID depuis l'URL : tiktok.com/@pseudo/video/1234567890123456789
+//   → Renseigne : type: "video", tiktokId: "1234567890123456789"
+//   → Ajoute une miniature manuellement : thumbnail: "/front/thumb-tiktok.jpg"
+//
+// 🖥️ VIDÉO LOCALE (sur ton serveur)
+//   → Place le fichier .mp4 dans /public/front/
+//   → Renseigne : type: "video", videoSrc: "/front/ma-video.mp4"
+//   → Ajoute une miniature : thumbnail: "/front/ma-video-thumb.jpg"
+//
+// ─────────────────────────────────────────────────────────────────────────────
 
 export type MediaType = "photo" | "video";
-export type VideoSource = "youtube" | "local";
+export type VideoSource = "youtube" | "tiktok" | "local";
 
 export interface PortfolioItem {
   id: number;
   type: MediaType;
   title: string;
   titleEn?: string;
-  // Pour les photos : chemin vers /public/portfolio/
-  src?: string;
-  // Pour les vidéos YouTube : ID de la vidéo (ex: "dQw4w9WgXcQ")
-  youtubeId?: string;
-  // Pour les vidéos locales : chemin vers /public/portfolio/
-  videoSrc?: string;
-  // Miniature (obligatoire pour les vidéos locales)
-  thumbnail?: string;
-  // Infos optionnelles
+
+  // ── Photo ─────────────────────────────────────────────
+  src?: string; // chemin vers /public/front/
+
+  // ── Vidéo YouTube ─────────────────────────────────────
+  youtubeId?: string; // ex: "dQw4w9WgXcQ"
+
+  // ── Vidéo TikTok ──────────────────────────────────────
+  tiktokId?: string; // ex: "7123456789012345678"
+  // Pour ouvrir le lien TikTok dans un nouvel onglet au lieu d'un embed
+  tiktokUrl?: string; // ex: "https://www.tiktok.com/@pseudo/video/7123..."
+
+  // ── Vidéo locale (serveur) ────────────────────────────
+  videoSrc?: string; // chemin vers /public/front/ (ex: "/front/clip.mp4")
+
+  // ── Commun vidéos ─────────────────────────────────────
+  thumbnail?: string; // miniature manuelle (obligatoire pour TikTok + local)
+
+  // ── Métadonnées ───────────────────────────────────────
   description?: string;
   descriptionEn?: string;
   date?: string; // format "YYYY-MM-DD"
@@ -41,17 +69,27 @@ export const portfolioItems: PortfolioItem[] = [
     date: "2026-04-28",
     tags: ["carentan", "assaut"],
   },
-  {
-    id: 2,
-    type: "video",
-    title: "Victoire à Stalingrad — Ligue FR",
-    titleEn: "Stalingrad Victory — FR League",
-    youtubeId: "dQw4w9WgXcQ", // ← Remplace par l'ID YouTube réel
-    description: "Match de ligue, victoire écrasante 5-1.",
-    descriptionEn: "League match, crushing 5-1 victory.",
-    date: "2026-04-14",
-    tags: ["stalingrad", "ligue"],
-  },
+
+  // ── Exemple Vidéo TikTok ─────────────────────────────────────────────────
+  // {
+  //   id: 7,
+  //   type: "video",
+  //   title: "Clip TikTok — Sniper L9O",
+  //   tiktokId: "7123456789012345678",       // ← ID dans l'URL TikTok
+  //   tiktokUrl: "https://www.tiktok.com/@tonpseudo/video/7123456789012345678",
+  //   thumbnail: "/front/tiktok-thumb.jpg",   // ← miniature manuelle obligatoire
+  //   date: "2026-05-01",
+  // },
+
+  // ── Exemple Vidéo Locale (serveur) ───────────────────────────────────────
+  // {
+  //   id: 8,
+  //   type: "video",
+  //   title: "Match vs EXD — Highlights",
+  //   videoSrc: "/front/match-exd.mp4",       // ← fichier dans /public/front/
+  //   thumbnail: "/front/match-exd-thumb.jpg",
+  //   date: "2026-04-20",
+  // },
 
   // ── Exemples Photos ──────────────────────────────────────────────────────
   {
@@ -59,7 +97,7 @@ export const portfolioItems: PortfolioItem[] = [
     type: "photo",
     title: "Capture du drapeau — Foy",
     titleEn: "Flag Capture — Foy",
-    src: "/images/hero-bg.png", // ← Remplace par /portfolio/photo1.jpg
+    src: "/images/hero-bg.png", // ← Remplace par /front/photo1.jpg
     description: "Moment décisif lors de la capture du dernier point.",
     descriptionEn: "Decisive moment during the last point capture.",
     date: "2026-04-07",
@@ -70,7 +108,7 @@ export const portfolioItems: PortfolioItem[] = [
     type: "photo",
     title: "Formation de commandement",
     titleEn: "Command Formation",
-    src: "/images/hero-bg.png", // ← Remplace par /portfolio/photo2.jpg
+    src: "/images/hero-bg.png", // ← Remplace par /front/photo2.jpg
     description: "Briefing stratégique avant le match.",
     descriptionEn: "Strategic briefing before the match.",
     date: "2026-03-31",
@@ -81,7 +119,7 @@ export const portfolioItems: PortfolioItem[] = [
     type: "photo",
     title: "Assaut sur Purple Heart Lane",
     titleEn: "Assault on Purple Heart Lane",
-    src: "/images/hero-bg.png", // ← Remplace par /portfolio/photo3.jpg
+    src: "/images/hero-bg.png", // ← Remplace par /front/photo3.jpg
     description: "Action intense lors de la Coupe Mars.",
     descriptionEn: "Intense action during the March Cup.",
     date: "2026-03-24",
