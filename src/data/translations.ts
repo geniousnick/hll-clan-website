@@ -8,6 +8,7 @@ export const translations = {
       roster: "Effectif",
       matches: "Palmarès",
       recruitment: "Recrutement",
+      portfolio: "Portfolio",
       discord: "Discord",
     },
     hero: {
@@ -148,6 +149,7 @@ export const translations = {
       roster: "Roster",
       matches: "Results",
       recruitment: "Recruitment",
+      portfolio: "Portfolio",
       discord: "Discord",
     },
     hero: {

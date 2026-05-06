@@ -45,6 +45,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
     { href: "/", label: t.home },
     { href: "/roster", label: t.roster },
     { href: "/matches", label: t.matches },
+    { href: "/portfolio", label: t.portfolio },
     { href: "/recrutement", label: t.recruitment },
   ];
 
