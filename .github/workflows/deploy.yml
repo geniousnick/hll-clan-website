@@ -21,3 +21,4 @@ jobs:
             npm install
             npm run build
             pm2 restart site-l9o
+            # Test de relance
