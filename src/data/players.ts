@@ -387,3 +387,12 @@ export const players: Player[] = [
     hllRecordsId: "2f3f37d1a29f83df95c9bd40882580bf",
   },
 ];
+
+export const roleOrder: PlayerRole[] = [
+  "commander",
+  "squadLeader",
+  "infantry",
+  "armor",
+  "recon",
+];
+
