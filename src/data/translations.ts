@@ -56,9 +56,9 @@ export const translations = {
         recon: "Reconnaissance",
       },
       stats: {
-        games: "jeux",
+        kills: "kills",
         winRate: "victoires",
-        kd: "K/D",
+        highestKills: "record",
       },
     },
     matches: {
@@ -198,9 +198,9 @@ export const translations = {
         recon: "Recon",
       },
       stats: {
-        games: "games",
+        kills: "kills",
         winRate: "win rate",
-        kd: "K/D",
+        highestKills: "record",
       },
     },
     matches: {

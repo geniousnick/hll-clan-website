@@ -33,9 +33,9 @@ export interface Player {
   // ↓ ID hllrecords.com (hash Team17 ou SteamID64). null = stats manuelles uniquement.
   hllRecordsId?: string | null;
   // Stats manuelles — utilisées en fallback si hllRecordsId est null ou si le fetch échoue
-  games?: number;
   winRate?: number;
-  kd?: number;
+  kills?: number;
+  highestKills?: number;
 }
 
 export const players: Player[] = [
@@ -47,7 +47,6 @@ export const players: Player[] = [
     grade: "Fondateur",
     specialty: "Commandant",
     hllRecordsId: "f53ee8524fb1cd8f4c7423fd364a78ce",
-    games: 6,
     winRate: 53
   },
 
@@ -59,7 +58,6 @@ export const players: Player[] = [
     grade: "Fondateur",
     specialty: "Squad Leader",
     hllRecordsId: "7a0b5acc7264432253ce1f5adf30fca4",
-    games: 7,
     winRate: 63
   },
   {
@@ -69,7 +67,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Squad Leader",
     hllRecordsId: "281a78000b9297a0b024c201f27bef37",
-    games: 55,
     winRate: 48
   },
   {
@@ -79,7 +76,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Squad Leader",
     hllRecordsId: "49e28cd448ea61017379119d1ffd11f1",
-    games: 26,
     winRate: 63
   },
   {
@@ -89,7 +85,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Squad Leader",
     hllRecordsId: "c60d0eda902919022364cc9a57d3aeb9",
-    games: 5,
     winRate: 53
   },
   {
@@ -99,7 +94,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Squad Leader",
     hllRecordsId: "5deda4b9249e6bacd98675c6f224aec6",
-    games: 12,
     winRate: 51
   },
   {
@@ -109,7 +103,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Squad Leader",
     hllRecordsId: "dc64caa55b60feb1dccdf5b4de29f162",
-    games: 7,
     winRate: 60
   },
   {
@@ -119,7 +112,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader",
     hllRecordsId: "37858fa832068ea4a3edd2f0b93a6b83",
-    games: 10,
     winRate: 65
   },
   {
@@ -129,7 +121,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader",
     hllRecordsId: "21d529aed73a463a2704b212c4f5a5de",
-    games: 12,
     winRate: 57
   },
   {
@@ -139,7 +130,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader",
     hllRecordsId: "d27cce69c7f551d128f1d0f283d94e8f",
-    games: 7,
     winRate: 61
   },
   {
@@ -149,7 +139,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader / Soldat d'attaque",
     hllRecordsId: "fbac944b9fb8e09a4b90e3f67fcd9e21",
-    games: 17,
     winRate: 64
   },
 
@@ -161,7 +150,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Tireur d'élite",
     hllRecordsId: "f43a995900ef82ae781f02139a076310",
-    games: 19,
     winRate: 61
   },
 
@@ -173,7 +161,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader Blindé",
     hllRecordsId: "4d286518b8ec5519e64e84d41a24edf5",
-    games: 13,
     winRate: 49
   },
   {
@@ -183,7 +170,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader Blindé",
     hllRecordsId: "ae75e682179d0affb83899233b1c6bd5",
-    games: 17,
     winRate: 66
   },
   {
@@ -193,7 +179,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Squad Leader Blindé",
     hllRecordsId: "9403f7ce6f0138c27162404536af5906",
-    games: 10,
     winRate: 64
   },
   {
@@ -203,7 +188,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Conducteur de char",
     hllRecordsId: "1dff510934c6f659106c8c49535093c8",
-    games: 13,
     winRate: 52
   },
   {
@@ -213,7 +197,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Conducteur de char",
     hllRecordsId: "791d40d7f2cab78849695e69191e9249",
-    games: 9,
     winRate: 64
   },
   {
@@ -223,7 +206,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Artilleur Principal",
     hllRecordsId: "1afea8a89b535f97dedf662e25a0dce3",
-    games: 9,
     winRate: 47
   },
   {
@@ -233,7 +215,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Tireur blindé",
     hllRecordsId: "bf708d9a7b60aeff3641f4729f7d55fc",
-    games: 11,
     winRate: 54
   },
   {
@@ -243,7 +224,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Équipier de char",
     hllRecordsId: "4dfa29adad372664a91064e2f3bad5c5",
-    games: 4,
     winRate: 62
   },
 
@@ -255,7 +235,6 @@ export const players: Player[] = [
     grade: "Fondateur",
     specialty: "Soldat d'attaque",
     hllRecordsId: "9d7bc756fe509882cea58af0b7e97b36",
-    games: 7,
     winRate: 49
   },
   {
@@ -265,7 +244,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Soldat d'attaque",
     hllRecordsId: "0f8f3743e5831306ca9363d5ed27beb8",
-    games: 10,
     winRate: 65
   },
   {
@@ -275,7 +253,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Soldat d'attaque",
     hllRecordsId: "8fca9c3621395599a33532383cc98cfa",
-    games: 21,
     winRate: 64
   },
   {
@@ -285,7 +262,6 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Soldat d'attaque",
     hllRecordsId: "9cca3f369aca015589e63863d46aade8",
-    games: 12,
     winRate: 48
   },
   {
@@ -303,7 +279,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "3bcd957e4d69ee99e517fa472bce3f80",
-    games: 6,
     winRate: 49
   },
   {
@@ -313,7 +288,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "30a2eded44779430855098b3880dd2da",
-    games: 7,
     winRate: 49
   },
   {
@@ -323,7 +297,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "27150f2c9e8976b9175ea98e86221a02",
-    games: 14,
     winRate: 69
   },
   {
@@ -333,7 +306,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "94e2677d0de83fcca451580f145ba87c",
-    games: 5,
     winRate: 52
   },
   {
@@ -343,7 +315,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "907fa88ff6dfb6660dbd98c029eba168",
-    games: 5,
     winRate: 65
   },
   {
@@ -361,7 +332,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "1631f8b86ba7e92a6540ee8778d54f99",
-    games: 8,
     winRate: 63
   },
   {
@@ -371,7 +341,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat d'attaque",
     hllRecordsId: "a434e2fec63078f865be403ecdc7f774",
-    games: 9,
     winRate: 67
   },
 
@@ -383,7 +352,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "1cd5a328eba2c106d8704f5aa8470ffa",
-    games: 11,
     winRate: 52
   },
   {
@@ -393,7 +361,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "7234580a20bb991277d0d7f41513c173",
-    games: 7,
     winRate: 47
   },
   {
@@ -403,7 +370,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "3d67f80bab0082a67fbde2ff3c69a099",
-    games: 11,
     winRate: 66
   },
   {
@@ -413,7 +379,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "4500fed5adcbff0f7be0f9b017f7a327",
-    games: 5,
     winRate: 51
   },
   {
@@ -423,7 +388,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "daf17df5d116a4632bebba4a83fe213e",
-    games: 3,
     winRate: 60
   },
   {
@@ -433,7 +397,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "e760e417e441a1fb1b8ec18c981c81cb",
-    games: 6,
     winRate: 69
   },
   {
@@ -443,7 +406,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "03a30581827152ece4220a6906e82efb",
-    games: 7,
     winRate: 63
   },
   {
@@ -453,7 +415,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "6aac6f49c7120379879b9e401755b056",
-    games: 6,
     winRate: 50
   },
   {
@@ -463,7 +424,6 @@ export const players: Player[] = [
     grade: "Soldat",
     specialty: "Soldat de défense",
     hllRecordsId: "2f3f37d1a29f83df95c9bd40882580bf",
-    games: 7,
     winRate: 49
   },
 ];

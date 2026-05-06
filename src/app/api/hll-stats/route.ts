@@ -10,6 +10,7 @@ interface HLLStats {
   pseudo: string;
   level: number | null;
   kills: number | null;
+  highestKills: number | null;
   deaths: number | null;
   kd: number | null;
   kpm: number | null;
@@ -102,6 +103,7 @@ async function scrapeHLLProfile(hllId: string): Promise<HLLStats> {
         stats.pseudo = profile.name || profile.username || profile.pseudo || "";
         stats.level = profile.level ?? null;
         stats.kills = profile.kills ?? profile.total_kills ?? null;
+        stats.highestKills = profile.highest_kills ?? profile.highest_kills_match ?? profile.most_kills ?? profile.best_kills ?? null;
         stats.deaths = profile.deaths ?? profile.total_deaths ?? null;
         stats.kd =
           profile.kd ??
@@ -162,6 +164,9 @@ async function scrapeHLLProfile(hllId: string): Promise<HLLStats> {
     const killsMatch = allText.match(/(?:Total\s*)?Kills?[:\s]*([0-9,]+)/i);
     if (killsMatch) stats.kills = parseNumber(killsMatch[1]);
 
+    const highestKillsMatch = allText.match(/(?:Highest|Most|Best)\s*Kills?[:\s]*([0-9,]+)/i);
+    if (highestKillsMatch) stats.highestKills = parseNumber(highestKillsMatch[1]);
+
     const deathsMatch = allText.match(/(?:Total\s*)?Deaths?[:\s]*([0-9,]+)/i);
     if (deathsMatch) stats.deaths = parseNumber(deathsMatch[1]);
 
@@ -184,6 +189,7 @@ async function scrapeHLLProfile(hllId: string): Promise<HLLStats> {
     pseudo: stats.pseudo || "",
     level: stats.level ?? null,
     kills: stats.kills ?? null,
+    highestKills: stats.highestKills ?? null,
     deaths: stats.deaths ?? null,
     kd: stats.kd ?? null,
     kpm: stats.kpm ?? null,

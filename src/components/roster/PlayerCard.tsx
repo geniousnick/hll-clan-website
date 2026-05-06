@@ -15,6 +15,7 @@ interface HLLLiveStats {
   pseudo?: string;
   level?: number | null;
   kills?: number | null;
+  highestKills?: number | null;
   deaths?: number | null;
   kd?: number | null;
   kpm?: number | null;
@@ -118,15 +119,15 @@ export default function PlayerCard({
   }, [forceRefresh, fetchStats]);
 
   // Valeurs affichées : live si disponibles, sinon manuelles
-  const displayKD =
-    liveStats?.kd !== undefined && liveStats.kd !== null
-      ? liveStats.kd.toFixed(2)
-      : player.kd?.toFixed(2) ?? "—";
+  const displayKills =
+    liveStats?.kills !== undefined && liveStats.kills !== null
+      ? liveStats.kills
+      : player.kills ?? "—";
 
-  const displayGames =
-    liveStats?.gamesPlayed !== undefined && liveStats.gamesPlayed !== null
-      ? liveStats.gamesPlayed
-      : player.games ?? "—";
+  const displayHighestKills =
+    liveStats?.highestKills !== undefined && liveStats.highestKills !== null
+      ? liveStats.highestKills
+      : player.highestKills ?? "—";
 
   const displayWinRate =
     liveStats?.winRate !== undefined && liveStats.winRate !== null
@@ -219,13 +220,13 @@ export default function PlayerCard({
         {/* Stats */}
         <div className="border-t border-[#1E2318] pt-3 mt-auto">
           <div className="grid grid-cols-3 gap-1">
-            {/* K/D */}
+            {/* Kills */}
             <div className="text-center">
               <p className="font-display text-base leading-none text-[#C45C1A]">
-                {displayKD}
+                {displayKills}
               </p>
               <p className="text-[#5A5C50] text-[10px] font-mono uppercase tracking-wider mt-0.5">
-                {t.stats.kd}
+                {t.stats.kills}
               </p>
             </div>
 
@@ -239,13 +240,13 @@ export default function PlayerCard({
               </p>
             </div>
 
-            {/* Parties */}
+            {/* Record Kills */}
             <div className="text-center">
               <p className="font-display text-base leading-none text-[#B0B2A8]">
-                {displayGames}
+                {displayHighestKills}
               </p>
               <p className="text-[#5A5C50] text-[10px] font-mono uppercase tracking-wider mt-0.5">
-                {t.stats.games}
+                {t.stats.highestKills}
               </p>
             </div>
           </div>
