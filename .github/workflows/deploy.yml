@@ -1,15 +1,4 @@
-name: Deploiement Automatique
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Connexion au serveur et mise à jour
+- name: Connexion au serveur et mise à jour
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -17,8 +6,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd htdocs/www.l9o.online
+            git config --global --add safe.directory /home/l9o/htdocs/www.l9o.online
             git pull origin main
             npm install
             npm run build
-            pm2 restart site-l9o
-            # Test de relance
+            # On tente de redémarrer, sinon on démarre
+            pm2 restart site-l9o || pm2 start npm --name "site-l9o" -- start -- -p 4000
