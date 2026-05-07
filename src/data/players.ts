@@ -319,7 +319,7 @@ export const players: Player[] = [
     role: "infantry",
     grade: "Officier",
     specialty: "Soldat d'attaque",
-    hllRecordsId: "9a6929dOc9d4fecd828dc05a51297283",
+    hllRecordsId: "9a6929d0c9d4fecd828dc05a51297283",
   },
   {
     id: 26,
