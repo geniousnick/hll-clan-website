@@ -37,6 +37,7 @@ export default function HomePage() {
                     ? `${14} soldats en opération`
                     : `${14} soldiers on duty`,
               },
+              /* Palmarès masqué temporairement
               {
                 href: "/matches",
                 icon: "⚔️",
@@ -46,6 +47,7 @@ export default function HomePage() {
                     ? "Historique de nos matchs officiels"
                     : "Official match history",
               },
+              */
               {
                 href: "/recrutement",
                 icon: "📋",

@@ -46,7 +46,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
   const navLinks = [
     { href: "/", label: t.home },
     { href: "/roster", label: t.roster },
-    { href: "/matches", label: t.matches },
+    // { href: "/matches", label: t.matches }, // Masqué temporairement
     { href: "/front", label: t.portfolio },
     { href: "/recrutement", label: t.recruitment },
   ];
