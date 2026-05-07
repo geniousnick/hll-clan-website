@@ -190,14 +190,6 @@ export default function PlayerCard({
                 title={`Live — mis à jour ${formatRelativeTime(liveStats!.lastUpdated!, lang)}`}
               />
             )}
-            {status === "error" && (
-              <span
-                className="text-[#C45C1A] text-xs font-mono"
-                title="Impossible de récupérer les stats"
-              >
-                ⚠
-              </span>
-            )}
           </div>
         </div>
 
