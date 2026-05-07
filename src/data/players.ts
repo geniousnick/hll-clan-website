@@ -45,7 +45,7 @@ export const players: Player[] = [
     id: 1,
     pseudo: "Genious",
     role: "commander",
-    grade: "Fondateur",
+    grade: "Leader",
     specialty: "Commandant",
     hllRecordsId: "f53ee8524fb1cd8f4c7423fd364a78ce",
     winRate: 56,
