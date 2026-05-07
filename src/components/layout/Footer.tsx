@@ -14,7 +14,7 @@ export default function Footer({ lang }: FooterProps) {
   const navLinks = [
     { href: "/", label: nav.home },
     { href: "/roster", label: nav.roster },
-    { href: "/front", label: nav.PortfolioGallery },
+    { href: "/front", label: nav.portfolio },
     // { href: "/matches", label: nav.matches },
     { href: "/recrutement", label: nav.recruitment },
   ];
