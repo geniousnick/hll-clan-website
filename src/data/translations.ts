@@ -50,6 +50,7 @@ export const translations = {
       subtitle: "Les soldats de l'Ombre",
       roles: {
         commander: "Commandant",
+        artillery: "Artillerie",
         squadLeader: "Chef d'Escouade",
         infantry: "Infanterie",
         armor: "Blindés",
@@ -192,6 +193,7 @@ export const translations = {
       subtitle: "Soldiers of the Shadow",
       roles: {
         commander: "Commander",
+        artillery: "Artillery",
         squadLeader: "Squad Leader",
         infantry: "Infantry",
         armor: "Armor",

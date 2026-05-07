@@ -12,6 +12,7 @@
 
 export type PlayerRole =
   | "commander"
+  | "artillery"
   | "squadLeader"
   | "infantry"
   | "armor"
@@ -237,7 +238,7 @@ export const players: Player[] = [
   {
     id: 18,
     pseudo: "BUMPY-971",
-    role: "armor",
+    role: "artillery",
     grade: "Soldat",
     specialty: "Artilleur Principal",
     hllRecordsId: "1afea8a89b535f97dedf662e25a0dce3",
@@ -517,6 +518,7 @@ export const players: Player[] = [
 
 export const roleOrder: PlayerRole[] = [
   "commander",
+  "artillery",
   "squadLeader",
   "infantry",
   "armor",

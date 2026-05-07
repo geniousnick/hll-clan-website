@@ -10,6 +10,7 @@ interface RosterSectionProps {
 
 const roleIcons: Record<PlayerRole, string> = {
   commander: "🎖️",
+  artillery: "💣",
   squadLeader: "⭐",
   infantry: "🪖",
   armor: "🛡️",
