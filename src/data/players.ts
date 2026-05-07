@@ -19,6 +19,7 @@ export type PlayerRole =
 
 export type PlayerGrade =
   | "Fondateur"
+  | "Leader"
   | "Officier"
   | "Sous-Officier"
   | "Soldat"

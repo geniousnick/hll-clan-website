@@ -33,6 +33,7 @@ type FetchStatus = "idle" | "loading" | "success" | "error";
 
 const gradeColors: Record<string, string> = {
   Fondateur: "#C45C1A",
+  Leader: "#C45C1A",
   Officier: "#8A9B56",
   "Sous-Officier": "#6B7A3E",
   Soldat: "#5A5C50",
@@ -41,6 +42,7 @@ const gradeColors: Record<string, string> = {
 
 const gradeLabel: Record<string, { fr: string; en: string }> = {
   Fondateur: { fr: "Fondateur", en: "Founder" },
+  Leader: { fr: "Leader", en: "Leader" },
   Officier: { fr: "Officier", en: "Officer" },
   "Sous-Officier": { fr: "Sous-Officier", en: "NCO" },
   Soldat: { fr: "Soldat", en: "Soldier" },
