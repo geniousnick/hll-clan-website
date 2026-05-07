@@ -6,6 +6,8 @@ import { useLang } from "@/components/layout/ClientLayout";
 import Link from "next/link";
 import { translations } from "@/data/translations";
 
+import ServerStatusWidget from "@/components/home/ServerStatusWidget";
+
 export default function HomePage() {
   const { lang } = useLang();
   const t = translations[lang];
@@ -13,6 +15,12 @@ export default function HomePage() {
   return (
     <>
       <HeroBanner lang={lang} />
+      
+      {/* Widget du Serveur HLL */}
+      <section className="bg-[#0C0D0B] relative z-20 px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+        <ServerStatusWidget />
+      </section>
+
       <PhilosophySection lang={lang} />
 
       {/* Quick links teaser section */}
