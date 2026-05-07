@@ -320,6 +320,9 @@ export const players: Player[] = [
     grade: "Officier",
     specialty: "Soldat d'attaque",
     hllRecordsId: "9a6929d0c9d4fecd828dc05a51297283",
+    winRate: 52,
+    kills: 27871,
+    highestKills: 111
   },
   {
     id: 26,
@@ -382,7 +385,10 @@ export const players: Player[] = [
     role: "infantry",
     grade: "Soldat",
     specialty: "Soldat d'attaque",
-    hllRecordsId: "Bdc64a1ec54c2679a6b68fdd09def0a3",
+    hllRecordsId: "bdc64a1ec54c2679a6b68fdd09def0a3",
+    winRate: 54,
+    kills: 3166,
+    highestKills: 78
   },
   {
     id: 32,
