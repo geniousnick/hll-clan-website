@@ -133,7 +133,7 @@ export const portfolioItems: PortfolioItem[] = [
     type: "photo",
     title: "C'est de l'art",
     titleEn: "It's art",
-    src: "/front/cestdelart.png", // ← Remplace par /front/photo1.jpg
+    src: "/front/cestdelart.jpg", // ← Remplace par /front/photo1.jpg
     description: "Magnifique structure de blindés.",
     descriptionEn: "Nice structure of tanks.",
     date: "2026-05-09",
