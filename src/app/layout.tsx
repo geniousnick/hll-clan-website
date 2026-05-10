@@ -37,6 +37,9 @@ export const metadata: Metadata = {
       "Site officiel du clan L9O. Compétitif · Tactique · Uni.",
     type: "website",
   },
+  verification: {
+    google: "A9u4Ma0YgvUN32LEKnWIKMlHcEqmLgL1TnKjNVDMjm0",
+  },
 };
 
 export default function RootLayout({
