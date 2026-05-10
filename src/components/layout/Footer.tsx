@@ -103,7 +103,7 @@ export default function Footer({ lang }: FooterProps) {
             © {new Date().getFullYear()} La 9ème Ombre [L9O]. {footer.rights}
           </p>
           <p className="text-[#3A3B33] text-xs font-mono">
-            Hell Let Loose — Team Competitive Website
+            Hell Let Loose — Team Competitive Website. Site non affilié à T17. Créé et developpé par Nicolas Dupuy - Genious.
           </p>
         </div>
       </div>
