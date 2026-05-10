@@ -145,7 +145,7 @@ export const portfolioItems: PortfolioItem[] = [
     type: "video",
     title: "Combat de blindés",
     titleEn: "Tank fight",
-    videoSrc: "/front/combatblindé.mp4",       // ← fichier dans /public/front/
+    videoSrc: "/front/combatblinde.mp4",       // ← fichier dans /public/front/
     thumbnail: "/front/logo-l9o.png",
     date: "2026-05-09",
   },
