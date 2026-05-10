@@ -57,18 +57,54 @@ export interface PortfolioItem {
 }
 
 export const portfolioItems: PortfolioItem[] = [
-  // ── Exemples Vidéos YouTube ──────────────────────────────────────────────
+
   {
     id: 1,
     type: "video",
-    title: "Offensive sur Carentan — L9O",
-    titleEn: "Carentan Offensive — L9O",
-    youtubeId: "dQw4w9WgXcQ", // ← Remplace par l'ID YouTube réel
-    description: "Opération coordonnée sur Carentan. Beau travail d'équipe.",
-    descriptionEn: "Coordinated operation on Carentan. Great teamwork.",
-    date: "2026-04-28",
-    tags: ["carentan", "assaut"],
+    title: "Offensive sur St-Mere-Eglise — L9O",
+    titleEn: "Offensive on St-Mere-Eglise — L9O",
+    youtubeId: "dbI6uwDFlas", // ← Remplace par l'ID YouTube réel
+    description: "Match compétitif vs 7cie",
+    descriptionEn: "Competitive match vs 7cie",
+    date: "2026-02-03",
+    tags: ["St-Mere-Eglise", "assaut"],
   },
+
+
+  {
+    id: 2,
+    type: "video",
+    title: "La L9O est efficace",
+    titleEn: "L9O is efficient",
+    videoSrc: "/front/video1.mp4",       // ← fichier dans /public/front/
+    thumbnail: "/front/logo-l9o.png",
+    date: "2026-05-09",
+  },
+
+  {
+    id: 3,
+    type: "video",
+    title: "Assaut de Squad Leader",
+    titleEn: "Squad Leader assault",
+    videoSrc: "/front/video2.mp4",       // ← fichier dans /public/front/
+    thumbnail: "/front/logo-l9o.png",
+    date: "2026-05-09",
+  },
+
+
+
+  // ── Exemples Vidéos YouTube ──────────────────────────────────────────────
+  // {
+  // id: 1,
+  // type: "video",
+  // title: "Offensive sur Carentan — L9O",
+  // titleEn: "Carentan Offensive — L9O",
+  //  youtubeId: "dQw4w9WgXcQ", // ← Remplace par l'ID YouTube réel
+  //  description: "Opération coordonnée sur Carentan. Beau travail d'équipe.",
+  // descriptionEn: "Coordinated operation on Carentan. Great teamwork.",
+  //  date: "2026-04-28",
+  //  tags: ["carentan", "assaut"],
+  // },
 
   // ── Exemple Vidéo TikTok ─────────────────────────────────────────────────
   // {
@@ -93,47 +129,34 @@ export const portfolioItems: PortfolioItem[] = [
 
   // ── Exemples Photos ──────────────────────────────────────────────────────
   {
-    id: 3,
-    type: "photo",
-    title: "Capture du drapeau — Foy",
-    titleEn: "Flag Capture — Foy",
-    src: "/images/hero-bg.png", // ← Remplace par /front/photo1.jpg
-    description: "Moment décisif lors de la capture du dernier point.",
-    descriptionEn: "Decisive moment during the last point capture.",
-    date: "2026-04-07",
-    tags: ["foy", "capture"],
-  },
-  {
     id: 4,
     type: "photo",
-    title: "Formation de commandement",
-    titleEn: "Command Formation",
-    src: "/images/hero-bg.png", // ← Remplace par /front/photo2.jpg
-    description: "Briefing stratégique avant le match.",
-    descriptionEn: "Strategic briefing before the match.",
-    date: "2026-03-31",
-    tags: ["commandement", "tactique"],
+    title: "C'est de l'art",
+    titleEn: "It's art",
+    src: "/front/cestdelart.png", // ← Remplace par /front/photo1.jpg
+    description: "Magnifique structure de blindés.",
+    descriptionEn: "Nice structure of tanks.",
+    date: "2026-05-09",
+    tags: ["Carentan", "capture"],
   },
+
   {
     id: 5,
-    type: "photo",
-    title: "Assaut sur Purple Heart Lane",
-    titleEn: "Assault on Purple Heart Lane",
-    src: "/images/hero-bg.png", // ← Remplace par /front/photo3.jpg
-    description: "Action intense lors de la Coupe Mars.",
-    descriptionEn: "Intense action during the March Cup.",
-    date: "2026-03-24",
-    tags: ["phl", "assaut"],
+    type: "video",
+    title: "Combat de blindés",
+    titleEn: "Tank fight",
+    videoSrc: "/front/combatblindé.mp4",       // ← fichier dans /public/front/
+    thumbnail: "/front/logo-l9o.png",
+    date: "2026-05-09",
   },
+
   {
     id: 6,
     type: "video",
-    title: "Highlights Avril 2026",
-    titleEn: "April 2026 Highlights",
-    youtubeId: "dQw4w9WgXcQ", // ← Remplace par l'ID YouTube réel
-    description: "Les meilleurs moments du mois d'avril.",
-    descriptionEn: "Best moments of April.",
-    date: "2026-04-30",
-    tags: ["highlights", "montage"],
+    title: "Clip TikTok — L9O",
+    tiktokId: "7594092462088441110",       // ← ID dans l'URL TikTok
+    tiktokUrl: "https://www.tiktok.com/@genious.le.tocard/video/7594092462088441110",
+    thumbnail: "/front/logo-l9o.png",   // ← miniature manuelle obligatoire
+    date: "2026-05-10",
   },
 ];
