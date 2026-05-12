@@ -134,7 +134,7 @@ export const players: Player[] = [
   },
   {
     id: 9,
-    pseudo: ".il_genio_",
+    pseudo: "il_genio_",
     role: "squadLeader",
     grade: "Soldat",
     specialty: "Squad Leader",
@@ -518,7 +518,7 @@ export const players: Player[] = [
   {
     id: 43,
     pseudo: "Vodoo",
-    role: "infantry",
+    role: "recon",
     grade: "Soldat",
     specialty: "Éclaireur",
     hllRecordsId: "4ebaa7a3ac55812b9ef0dd642d1bee42",
