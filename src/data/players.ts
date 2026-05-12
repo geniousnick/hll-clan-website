@@ -196,7 +196,7 @@ export const players: Player[] = [
     pseudo: "FilykamiD",
     role: "armor",
     grade: "Soldat",
-    specialty: "Squad Leader Blindé",
+    specialty: "Tireur de char",
     hllRecordsId: "ae75e682179d0affb83899233b1c6bd5",
     winRate: 68,
     kills: 13299,
@@ -514,6 +514,16 @@ export const players: Player[] = [
     kills: 3286,
     highestKills: 36
   },
+  // ── Infanterie - Support ────────────────────────────────────────────────
+  {
+    id: 43,
+    pseudo: "Vodoo",
+    role: "infantry",
+    grade: "Soldat",
+    specialty: "Éclaireur",
+    hllRecordsId: "4ebaa7a3ac55812b9ef0dd642d1bee42",
+  },
+
 ];
 
 export const roleOrder: PlayerRole[] = [
